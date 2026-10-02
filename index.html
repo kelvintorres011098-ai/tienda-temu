@@ -1,0 +1,427 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ofertas Temu</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: linear-gradient(135deg, #ff6a00, #ff8a00);
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+   header h1 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+    header p {
+      margin: 8px 0 0;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+
+   .intro {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 16px;
+    text-align: center;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border: 1px solid #eeeeee;
+}
+.buscador-contenedor {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    max-width: 600px;
+    margin: 25px auto 35px;
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.10);
+    overflow: hidden;
+}
+
+#buscador {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 16px 20px;
+    font-size: 20px;
+    background: transparent;
+}
+
+#buscador::placeholder {
+    color: #999;
+}
+
+.buscador-contenedor button {
+    border: none;
+    background: #ff4d00;
+    color: white;
+    width: 55px;
+    height: 55px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buscador-contenedor button:hover {
+    background: #e63f00;
+}
+}
+
+#buscador:focus {
+    border-color: #ff4d00;
+    box-shadow: 0 5px 20px rgba(255,77,0,0.20);
+}
+
+#buscador::placeholder {
+    color: #999;
+}
+     .producto {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    border: 1px solid #eeeeee;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.precio {
+    font-size: 24px;
+    font-weight: bold;
+   color: #ff4b00 !important; 
+    margin: 12px 0;
+}
+.producto {
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.producto:hover {.producto img {
+    display: block;
+    width: 100%;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.producto:hover img {
+    transform: scale(1.03);
+}
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+}
+    }
+
+    .producto .emoji {
+      font-size: 55px;
+      margin-bottom: 10px;
+    }
+
+    .producto h2 {
+      font-size: 20px;
+      margin: 10px 0;
+    }
+
+    .producto p {
+      color: #666;
+    }
+
+    .boton {
+    display: inline-block;
+    background: #ff4b00;
+    color: white;
+    text-decoration: none;
+    padding: 13px 22px;
+    font-size: 16px;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255,75,0,0.25);
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+    .boton:hover {
+    background: #d93f00;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(255,75,0,0.30);
+}
+    
+      footer {
+      text-align: center;
+      padding: 30px 15px;
+      color: #666;
+    }
+  </style>
+<style>.productos{display:grid !important;grid-template-columns:repeat(2,minmax(220px,1fr)) !important;gap:20px !important;}</style><style>.producto{min-height:420px;display:flex;flex-direction:column;justify-content:flex-start;align-items:center;}</style><style>.producto img{width:100%;height:220px;object-fit:contain;border-radius:12px;}</style></head>
+
+<body>
+
+  <header>
+    <h1> <img src="temu-logo.png" alt="Temu" style="width:100px;height:100px;object-fit:contain;vertical-align:middle;margin-right:8px;">Ofertas Temu</h1>
+    <p>Descubre  ofertas y productos interesantes en Temu</p>
+  </header>
+
+  <main>
+
+    <section class="intro">
+      <h2>🔥 Descubre nuestras ofertas</h2>
+      <p>Descubre productos interesantes y consulta las ofertas disponibles.</p>
+    </section>
+
+    <section class="productos">
+<div style="grid-column:1/-1;text-align:center;margin:30px 0;width:100%;">
+<div class="buscador-contenedor">
+<input id="buscador" type="text" placeholder="Buscar productos..." onkeydown="if(event.key==='Enter') buscarProductos(this.value)">
+    <button type="button" onclick="buscarProductos(document.getElementById('buscador').value)">🔍</button>
+</div>
+</div>
+       <article class="producto">
+       <img src="lenceria.jpeg" alt="" style="width:100%;max-width:220px;border-radius:12px;">
+        <h2>Ropa Interior</h2>
+        <p>Sexy y Elegante.</p><p class="precio">$10.99</p><p>Consulta disponibilidad y precio en Temu.</p>
+        <a class="boton" href="https://temu.to/k/puq4sk2l5wo">Ver oferta</a>
+      </article> 
+
+          <article class="producto">
+       <img src="bolso.jpeg" alt="" style="width:100%;max-width:220px;border-radius:12px;">
+        <h2>Bolsos</h2>
+        <p> Elegante.</p><p class="precio">$6.99</p><p>Consulta disponibilidad y precio en Temu.</p>
+        <a class="boton" href="https://temu.to/k/pflemraryaq">Ver oferta</a>
+      </article>
+
+
+          <article class="producto">
+       <img src="hombre.jpeg" alt="" style="width:100%;max-width:220px;border-radius:12px;">
+        <h2>Ropa para  Hombre</h2>
+        <p>Comodidad.</p><p class="precio">$13.30</p><p>Consulta disponibilidad y precio en Temu.</p>
+        <a class="boton" href="https://temu.to/k/pff26nufkme">Ver oferta</a>
+      </article>
+
+       
+        <article class="producto">
+       <img src="calzado.jpeg" alt="" style="width:100%;max-width:220px;border-radius:12px;">
+        <h2>Calzado de Hombre</h2>
+        <p>Comodidad.</p><p class="precio">$1.99</p><p>Consulta disponibilidad y precio en Temu.</p>
+        <a class="boton" href="https://temu.to/k/pyd1ped902l">Ver oferta</a>
+      </article>
+      
+        <article class="producto">
+       <img src="calzadonino.jpeg" alt="" style="width:100%;max-width:220px;border-radius:12px;">
+        <h2>Calzado De NIÑO</h2>
+        <p>Suave.</p><p class="precio">$9.41</p><p>Consulta disponibilidad y precio en Temu.</p>
+        <a class="boton" href="https://temu.to/k/psixrfuqj9b">Ver oferta</a>
+      </article>
+
+         <article class="producto">
+       <img src="accesorio.jpeg" alt="" style="width:100%;max-width:220px;border-radius:12px;">
+        <h2>Accesorios</h2>
+        <p>Autentico.</p><p class="precio">$0.84</p><p>Consulta disponibilidad y precio en Temu.</p>
+        <a class="boton" href="https://temu.to/k/pzlkbddatb0">Ver oferta</a>
+      </article>
+
+
+        <article class="producto">
+       <img src="telefono.jpeg" alt="" style="width:100%;max-width:220px;border-radius:12px;">
+        <h2>Telefonos y Mas</h2>
+        <p>Resistecian y Calidad.</p><p class="precio">$58.99</p><p>Consulta disponibilidad y precio en Temu.</p>
+        <a class="boton" href="https://temu.to/k/p3kkj7sajvc">Ver oferta</a>
+      </article>
+
+            <article class="producto">
+       <img src="inteligente.jpeg" alt="" style="width:100%;max-width:220px;border-radius:12px;">
+        <h2>Hogar Inteligente</h2>
+        <p>Seguridad.</p><p class="precio">$8.99</p><p>Consulta disponibilidad y precio en Temu.</p>
+        <a class="boton" href="https://temu.to/k/pvubjeja13t">Ver oferta</a>
+      </article>
+       
+          <article class="producto">
+       <img src="cocina.jpeg" alt="" style="width:100%;max-width:220px;border-radius:12px;">
+        <h2>Cocina</h2>
+        <p>Comodidad.</p><p class="precio">$31.69</p><p>Consulta disponibilidad y precio en Temu.</p>
+        <a class="boton" href="https://temu.to/k/pmzgmr4q2o3">Ver oferta</a>
+      </article>
+
+
+      <article class="producto">
+       <img src="auriculares.jpeg" alt="Auriculares Bluetooth" style="width:100%;max-width:220px;border-radius:12px;">
+        <h2>Auriculares Bluetooth</h2>
+        <p>Consulta el precio y la oferta actual.</p><p class="precio">$9.99</p><p>Consulta disponibilidad y precio en Temu.</p>
+        <a class="boton" href="https://temu.to/k/pdt2fqz1w9g">Ver oferta</a>
+      </article>
+
+
+      <article class="producto">
+        <img src="lampara.jpegl" alt="Articulos para el hogar" style="width:100%;max-width:220px;border-radius:12px;">
+        <h2>Articulos para el hogar</h2>
+        <p>Una opción práctica para el hogar.</p><p class="precio">$14.99</p><p>Consulta disponibilidad y precio en Temu.</p>
+        <a class="boton" href="https://temu.to/k/pirzr5zxao3">Ver oferta</a>
+      </article> 
+
+       <article class="producto">
+        <img src="oficina.jpeg" alt="" style="width:100%;max-width:220px;border-radius:12px;">
+        <h2>Oficina</h2>
+        <p>Espacioso y Organizado.</p><p class="precio">$8.99</p><p>Consulta disponibilidad y precio en Temu.</p>
+        <a class="boton" href="https://temu.to/k/ppf4cb8emia">Ver oferta</a>
+      </article>
+
+       
+        <article class="producto">
+        <img src="jardin.jpeg" alt="Articulos para el hogar" style="width:100%;max-width:220px;border-radius:12px;">
+        <h2>Jardin</h2>
+        <p>Haz que crezcan tus flores.</p><p class="precio">$31.99</p><p>Consulta disponibilidad y precio en Temu.</p>
+        <a class="boton" href="https://temu.to/k/p0friiw68qz">Ver oferta</a>
+      </article>
+
+       <article class="producto">
+        <img src="industrial.jpeg" alt="" style="width:100%;max-width:220px;border-radius:12px;">
+        <h2>Industrial</h2>
+        <p>Calidad y Durabilidad.</p><p class="precio">$34.99</p><p>Consulta disponibilidad y precio en Temu.</p>
+        <a class="boton" href="https://temu.to/k/pwri6t70x1s">Ver oferta</a>
+      </article>
+
+
+     <article class="producto">
+        <img src="herramientas.jpeg" alt="" style="width:100%;max-width:220px;border-radius:12px;">
+        <h2>Herramientas</h2>
+        <p>Una opción util  para el hogar.</p><p class="precio">$19.99</p><p>Consulta disponibilidad y precio en Temu.</p>
+        <a class="boton" href="https://temu.to/k/pg07rplc0i3">Ver oferta</a>
+      </article>
+       
+       <article class="producto">
+        <img src="mascota.jpeg" alt="" style="width:100%;max-width:220px;border-radius:12px;">
+        <h2>Mascotas</h2>
+        <p>Vida Lujosa.</p><p class="precio">$19.99</p><p>Consulta disponibilidad y precio en Temu.</p>
+        <a class="boton" href="https://temu.to/k/pj74vlnekz0">Ver oferta</a>
+      </article>
+  
+ 
+       <article class="producto">
+        <img src="ropademujer.jpeg" alt="" style="width:100%;max-width:220px;border-radius:12px;">
+        <h2>Mujer</h2>
+        <p>Luce elegante.</p><p class="precio">$12.99</p><p>Consulta disponibilidad y precio en Temu.</p>
+        <a class="boton" href="https://temu.to/k/piq9hpo9w71">Ver oferta</a>
+      </article>
+
+
+      <article class="producto">
+        <img src="mochila.jpegm" alt="" style="width:100%;max-width:220px;border-radius:12px;">
+        <h2>Mochilas y mas</h2>
+        <p>Consulta la oferta disponible.</p><p class="precio">$19.99</p><p>Consulta disponibilidad y precio en Temu.</p>
+        <a class="boton" href="https://temu.to/k/pnthzxcgk2z">Ver oferta</a>
+      </article>
+
+      <article class="producto">
+<img src="teclado.jpegt" alt="" style="width:100%;max-width:220px;border-radius:12px;">        <h2>Accesorios Gaming</h2>
+        <p>Consulta el producto en Temu.</p><p class="precio">$24.99</p><p>Consulta disponibilidad y precio en Temu.</p>
+        <a class="boton" href="https://temu.to/k/pdklfaw62jh">Ver oferta</a>
+      </article>
+
+     <article class="producto">
+    <img src="juguete.jpeg" alt="">
+    <h2>Juguetes</h2>
+    <p>Una opción ideal para el día a día.</p>
+    <p class="precio">$1.99</p>
+<a class="boton" href="https://temu.to/k/pgfaq8akey4">Ver oferta</a>
+</article>
+
+
+<article class="producto">
+    <img src="perfume2.jpeg" alt="Perfume">
+    <h2>Perfume elegante</h2>
+    <p>Una opción ideal para el día a día.</p>
+    <p class="precio">$14.99</p>
+<a class="boton" href="https://temu.to/k/pz7jwxmzo5e">Ver oferta</a>
+</article>
+
+    </section>
+
+  </main>
+
+  <footer><button class="boton" onclick="window.scrollTo({top:0, behavior:'smooth'})">⬆️ Volver arriba</button>
+    <p>© 2026 Ofertas Temu . Todos los derechos reservados</p><p>Nota: algunos enlaces de esta página son enlaces de afiliado. Si realizas una compra a través de ellos, podemos recibir una comisión.</p>
+  </footer>
+<script>
+function buscarProductos(texto) {
+    texto = texto.toLowerCase();
+
+    const productos = document.querySelectorAll(".producto");
+    let encontrados = 0;
+
+    productos.forEach(function(producto) {
+        const nombre = producto.querySelector("h2").textContent.toLowerCase();
+
+        if (nombre.includes(texto)) {
+            producto.style.display = "";
+            encontrados++;
+        } else {
+            producto.style.display = "none";
+        }
+    });
+
+    let mensaje = document.getElementById("mensajeBusqueda");
+
+    if (!mensaje) {
+        mensaje = document.createElement("p");
+        mensaje.id = "mensajeBusqueda";
+        mensaje.style.textAlign = "center";
+        mensaje.style.fontSize = "18px";
+        mensaje.style.padding = "20px";
+        mensaje.style.color = "#666";
+
+        document.querySelector(".productos").appendChild(mensaje);
+    }
+
+if (texto !== "" && encontrados === 0) {
+    mensaje.textContent = "😕 No se encontraron productos";
+    mensaje.style.display = "block";
+
+    setTimeout(function() {
+        productos.forEach(function(producto) {
+            producto.style.display = "";
+        });
+
+        mensaje.style.display = "none";
+    }, 2000);
+
+} else {
+    mensaje.style.display = "none";
+}
+
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ofertas Temu</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #ff4b00;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    header p {
+      margin: 8px 0 0;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+
+    .intro {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+.precio {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+    .producto {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      overflow: hidden;transition: transform 0.2s ease;
+      .producto:hover {
+  transform: translateY(-4px);
+}
+    }
+
+    .producto .emoji {
+      font-size: 55px;
+      margin-bottom: 10px;
+    }
+
+    .producto h2 {
+      font-size: 20px;
+      margin: 10px 0;
+    }
+
+    .producto p {
+      color: #666;
+    }
+
+    .boton {
+      display: inline-block;
+      background: #ff4b00;
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .boton:hover {
+      background: #d93f00;
+    }
+    
+      footer {
+      text-align: center;
+      padding: 30px 15px;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>🛍️ Ofertas Temu</h1>
+    <p>Descubre  ofertas y productos interesantes en Temu</p>
+  </header>
+
+  <main>
+
+    <section class="intro">
+      <h2>🔥 Descubre nuestras ofertas</h2>
+      <p>Descubre productos interesantes y consulta las ofertas disponibles.</p>
+    </section>
+
+    <section class="productos">
+
+      <article class="producto">
+       <img src="auriculares.jpeg" alt="Auriculares Bluetooth" style="width:100%;max-width:300px;border-radius:12px;">
+        <h2>Auriculares Bluetooth</h2>
+        <p>Consulta el precio y la oferta actual.</p><p class="precio">$9.99</p><p>Consulta disponibilidad y precio en Temu.</p>
+        <a class="boton" href="https://temu.to/k/p9mkk6k7vfw">Ver oferta</a>
+      </article>
+
+      <article class="producto">
+        <img src="lampara.jpegl" alt="Lámpara LED para el hogar" style="width:100%;max-width:300px;border-radius:12px;">
+        <h2>Lámpara LED para el hogar</h2>
+        <p>Una opción práctica para el hogar.</p><p class="precio">$14.99</p><p>Consulta disponibilidad y precio en Temu.</p>
+        <a class="boton" href="https://temu.to/k/p9mkk6k7vfw">Ver oferta</a>
+      </article>
+
+      <article class="producto">
+        <img src="mochila.jpegm" alt="Mochila para uso diario" style="width:100%;max-width:300px;border-radius:12px;">
+        <h2>Mochila para uso diario</h2>
+        <p>Consulta la oferta disponible.</p><p class="precio">$19.99</p><p>Consulta disponibilidad y precio en Temu.</p>
+        <a class="boton" href="https://temu.to/k/p9mkk6k7vfw">Ver oferta</a>
+      </article>
+
+      <article class="producto">
+<img src="teclado.jpegt" alt="Teclado inalámbrico" style="width:100%;max-width:300px;border-radius:12px;">        <h2>Teclado inalámbrico</h2>
+        <p>Consulta el producto en Temu.</p><p class="precio">$24.99</p><p>Consulta disponibilidad y precio en Temu.</p>
+        <a class="boton" href="https://temu.to/k/p9mkk6k7vfw">Ver oferta</a>
+      </article>
+
+    </section>
+
+  </main>
+
+  <footer><button class="boton" onclick="window.scrollTo({top:0, behavior:'smooth'})">⬆️ Volver arriba</button>
+    <p>© 2026 Ofertas Temu . Todos los derechos reservados</p><p>Nota: algunos enlaces de esta página son enlaces de afiliado. Si realizas una compra a través de ellos, podemos recibir una comisión.</p>
+  </footer>
+
+</body>
+</html>
